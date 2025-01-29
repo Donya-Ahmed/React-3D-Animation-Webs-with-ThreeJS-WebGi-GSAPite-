@@ -18,7 +18,7 @@ export default function WebgiViewer() {
   const canvasRef = useRef(null);
  const memorizeScrollFunction=useCallback((position,target,onUpdate)=>{
   if(position && target && onUpdate){
-    scrollAimation(position && target && onUpdate)
+    scrollAimation(position , target , onUpdate)
   }
  },[])
   const setupViewer = useCallback(async () => {
@@ -64,7 +64,7 @@ export default function WebgiViewer() {
 
   useEffect(() => {
     setupViewer();
-  }, [setupViewer]);
+  }, []);
 
   return (
     <div id="webgi-canvas-container">
